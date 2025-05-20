@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 @app.route("/")
 def home():
     return """<h1>Welcome to the Game Engine!</h1>
-                <p>Bingo!</p>
+
             """
      
 
