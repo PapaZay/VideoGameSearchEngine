@@ -1,0 +1,51 @@
+# Python virtual environments
+FlaskGameSE/
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Local development settings
+local_settings.py
+
+# Docker related
+.docker/
+docker-compose.override.yml
+
+# Database files
+*.db
+*.sqlite3

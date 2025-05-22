@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 const App = () => {
   const [games, setGames] = useState([]);
   const [search, setSearch] = useState("");
@@ -15,7 +15,8 @@ const App = () => {
     try{
       setLoading(true)
       setError(null);
-      const response = await fetch(`http://127.0.0.1:5000/games?search=${encodeURIComponent(search)}`);
+      const API_URL = import.meta.env.VITE_APP_URL || 'http://127.0.0.1:5000';
+      const response = await fetch(`${API_URL}/games?search=${encodeURIComponent(search)}`);
       if (!response.ok){
         const errorData = await response.json().catch(() => null);
         throw new Error(errorData?.error || `HTTP error! status: ${response.status}`);
